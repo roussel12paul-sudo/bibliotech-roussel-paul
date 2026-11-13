@@ -1,0 +1,517 @@
+/* ===== Variables ===== */
+:root {
+    --encre: #1f2a37;
+    --texte: #374151;
+    --gris: #6b7280;
+    --ligne: #e5e1d8;
+    --fond: #faf7f2;
+    --papier: #ffffff;
+    --accent: #9a3412;
+    --accent-clair: #fdf1e9;
+    --vert: #15803d;
+    --vert-clair: #e8f5ec;
+    --rouge: #b91c1c;
+    --rouge-clair: #fdecec;
+    --rayon: 10px;
+    --ombre: 0 2px 8px rgba(31, 42, 55, 0.07);
+    --ombre-survol: 0 12px 28px rgba(31, 42, 55, 0.14);
+    --titres: Georgia, "Times New Roman", serif;
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--fond);
+    color: var(--texte);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.conteneur {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    flex: 1;
+    padding-top: 36px;
+    padding-bottom: 56px;
+}
+
+/* ===== En-tête ===== */
+.entete {
+    background: var(--papier);
+    border-bottom: 1px solid var(--ligne);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.entete-contenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+}
+
+.logo {
+    font-family: var(--titres);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--encre);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    color: var(--gris);
+    font-weight: 500;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.menu a:hover,
+.menu a.actif {
+    color: var(--encre);
+    border-bottom-color: var(--accent);
+}
+
+/* ===== Titres de page ===== */
+.page-titre {
+    font-family: var(--titres);
+    font-size: 2.2rem;
+    color: var(--encre);
+    line-height: 1.2;
+}
+
+.page-sous-titre {
+    color: var(--gris);
+}
+
+/* ===== En-tête du catalogue et filtres ===== */
+.catalogue-entete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtres select {
+    padding: 10px 14px;
+    border: 1px solid var(--ligne);
+    border-radius: 8px;
+    background: var(--papier);
+    color: var(--texte);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.lien-reset {
+    color: var(--gris);
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+/* ===== Boutons ===== */
+.bouton {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--encre);
+    color: var(--papier);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bouton:hover {
+    background: var(--accent);
+}
+
+.bouton:disabled {
+    background: #c9c5bd;
+    cursor: not-allowed;
+}
+
+.bouton-petit {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+.bouton-grand {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+}
+
+/* ===== Grille de livres ===== */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 28px;
+}
+
+/* ===== Carte livre ===== */
+.carte {
+    display: flex;
+    flex-direction: column;
+    background: var(--papier);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.carte:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ombre-survol);
+}
+
+.carte-couverture {
+    position: relative;
+    display: block;
+    aspect-ratio: 2 / 3;
+    background: var(--ligne);
+}
+
+.carte-couverture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-disponible {
+    background: var(--vert-clair);
+    color: var(--vert);
+}
+
+.badge-indisponible {
+    background: var(--rouge-clair);
+    color: var(--rouge);
+}
+
+.carte-contenu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 14px 16px 16px;
+}
+
+.genre {
+    align-self: flex-start;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--accent-clair);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.carte-titre {
+    font-family: var(--titres);
+    font-size: 1.1rem;
+    color: var(--encre);
+    line-height: 1.3;
+}
+
+.carte-auteur {
+    color: var(--gris);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.carte-bas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--ligne);
+}
+
+.carte-annee {
+    font-size: 0.85rem;
+    color: var(--gris);
+}
+
+/* ===== Fil d'Ariane ===== */
+.fil-ariane {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+    color: var(--gris);
+}
+
+.fil-ariane a {
+    text-decoration: underline;
+}
+
+.fil-ariane a:hover {
+    color: var(--accent);
+}
+
+.fil-actuel {
+    color: var(--encre);
+    font-weight: 600;
+}
+
+/* ===== Fiche d'un livre ===== */
+.fiche {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-bottom: 56px;
+}
+
+.fiche-couverture {
+    aspect-ratio: 2 / 3;
+    border-radius: var(--rayon);
+    overflow: hidden;
+    background: var(--ligne);
+    box-shadow: var(--ombre-survol);
+}
+
+.fiche-couverture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fiche-titre {
+    font-family: var(--titres);
+    font-size: 2.6rem;
+    color: var(--encre);
+    line-height: 1.15;
+    margin: 6px 0 4px;
+}
+
+.fiche-auteur {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.fiche-auteur strong {
+    color: var(--encre);
+}
+
+.fiche-resume {
+    max-width: 640px;
+    margin-bottom: 24px;
+}
+
+/* Informations clés */
+.fiche-infos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 640px;
+    margin-bottom: 24px;
+}
+
+.info {
+    background: var(--papier);
+    border: 1px solid var(--ligne);
+    border-radius: var(--rayon);
+    padding: 12px 14px;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gris);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-valeur {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--encre);
+}
+
+/* Disponibilité */
+.dispo {
+    max-width: 640px;
+    padding: 16px 18px;
+    border-radius: var(--rayon);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.dispo-ok {
+    background: var(--vert-clair);
+    color: var(--vert);
+}
+
+.dispo-non {
+    background: var(--rouge-clair);
+    color: var(--rouge);
+}
+
+.fiche-action {
+    max-width: 640px;
+}
+
+/* ===== Sections secondaires ===== */
+.section {
+    margin-bottom: 56px;
+}
+
+.section-titre {
+    font-family: var(--titres);
+    font-size: 1.5rem;
+    color: var(--encre);
+    margin-bottom: 18px;
+}
+
+/* ===== Tableau ===== */
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--papier);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+}
+
+.tableau th,
+.tableau td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--ligne);
+}
+
+.tableau th {
+    background: var(--accent-clair);
+    color: var(--encre);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tableau tr:last-child td {
+    border-bottom: none;
+}
+
+.statut {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.statut-rendu {
+    color: var(--vert);
+}
+
+.statut-en-cours {
+    color: var(--accent);
+}
+
+/* ===== Pied de page ===== */
+.pied {
+    background: var(--encre);
+    color: #b8c0cc;
+    padding: 24px 0;
+    font-size: 0.9rem;
+}
+
+.pied-contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 800px) {
+    .fiche {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .fiche-couverture {
+        max-width: 240px;
+    }
+
+    .fiche-titre {
+        font-size: 2rem;
+    }
+
+    .fiche-infos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-titre {
+        font-size: 1.8rem;
+    }
+
+    .filtres select,
+    .filtres .bouton {
+        width: 100%;
+    }
+
+    .grille {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .tableau th:nth-child(3),
+    .tableau td:nth-child(3) {
+        display: none;
+    }
+}

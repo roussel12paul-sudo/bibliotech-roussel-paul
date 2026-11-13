@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catalogue — BiblioTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="entete">
+        <div class="conteneur entete-contenu">
+            <a href="#" class="logo">Biblio<span>Tech</span></a>
+            <nav class="menu">
+                <a href="#" class="actif">Catalogue</a>
+                <a href="#">Les plus empruntés</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteneur">
+
+        <section class="catalogue-entete">
+            <div>
+                <h1 class="page-titre">Le catalogue</h1>
+                <p class="page-sous-titre">12 livres</p>
+            </div>
+
+            <form method="get" class="filtres">
+                <select name="genre">
+                    <option value="">Tous les genres</option>
+                    <option value="Aventure">Aventure</option>
+                    <option value="Policier">Policier</option>
+                    <option value="Roman">Roman</option>
+                    <option value="Science-fiction">Science-fiction</option>
+                </select>
+
+                <select name="auteur">
+                    <option value="">Tous les auteurs</option>
+                    <option value="Agatha Christie">Agatha Christie</option>
+                    <option value="Albert Camus">Albert Camus</option>
+                    <option value="Alexandre Dumas">Alexandre Dumas</option>
+                    <option value="Arthur Conan Doyle">Arthur Conan Doyle</option>
+                    <option value="Frank Herbert">Frank Herbert</option>
+                    <option value="George Orwell">George Orwell</option>
+                    <option value="Gustave Flaubert">Gustave Flaubert</option>
+                    <option value="Isaac Asimov">Isaac Asimov</option>
+                    <option value="Jules Verne">Jules Verne</option>
+                    <option value="Victor Hugo">Victor Hugo</option>
+                    <option value="Émile Zola">Émile Zola</option>
+                </select>
+
+                <select name="tri">
+                    <option value="">Trier par titre</option>
+                    <option value="annee_desc">Plus récents d'abord</option>
+                    <option value="annee_asc">Plus anciens d'abord</option>
+                </select>
+
+                <button type="submit" class="bouton">Filtrer</button>
+                <a href="#" class="lien-reset">Réinitialiser</a>
+            </form>
+        </section>
+
+        <section class="grille">
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=1984" alt="1984">
+                        <span class="badge badge-disponible">2 / 3 disponibles</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Science-fiction</span>
+                        <h2 class="carte-titre">1984</h2>
+                        <p class="carte-auteur">George Orwell</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1949</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Dune" alt="Dune">
+                        <span class="badge badge-indisponible">Indisponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Science-fiction</span>
+                        <h2 class="carte-titre">Dune</h2>
+                        <p class="carte-auteur">Frank Herbert</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1965</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Fondation" alt="Fondation">
+                        <span class="badge badge-disponible">1 / 2 disponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Science-fiction</span>
+                        <h2 class="carte-titre">Fondation</h2>
+                        <p class="carte-auteur">Isaac Asimov</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1951</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Germinal" alt="Germinal">
+                        <span class="badge badge-disponible">1 / 3 disponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Roman</span>
+                        <h2 class="carte-titre">Germinal</h2>
+                        <p class="carte-auteur">Émile Zola</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1885</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=L%27%C3%89tranger" alt="L'Étranger">
+                        <span class="badge badge-indisponible">Indisponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Roman</span>
+                        <h2 class="carte-titre">L'Étranger</h2>
+                        <p class="carte-auteur">Albert Camus</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1942</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Le+Chien+des+Baskerville" alt="Le Chien des Baskerville">
+                        <span class="badge badge-disponible">2 / 2 disponibles</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Policier</span>
+                        <h2 class="carte-titre">Le Chien des Baskerville</h2>
+                        <p class="carte-auteur">Arthur Conan Doyle</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1902</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Le+Comte+de+Monte-Cristo" alt="Le Comte de Monte-Cristo">
+                        <span class="badge badge-disponible">1 / 2 disponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Aventure</span>
+                        <h2 class="carte-titre">Le Comte de Monte-Cristo</h2>
+                        <p class="carte-auteur">Alexandre Dumas</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1844</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Le+Crime+de+l%27Orient-Express" alt="Le Crime de l'Orient-Express">
+                        <span class="badge badge-disponible">3 / 3 disponibles</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Policier</span>
+                        <h2 class="carte-titre">Le Crime de l'Orient-Express</h2>
+                        <p class="carte-auteur">Agatha Christie</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1934</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Le+Tour+du+monde+en+80+jours" alt="Le Tour du monde en 80 jours">
+                        <span class="badge badge-disponible">3 / 4 disponibles</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Aventure</span>
+                        <h2 class="carte-titre">Le Tour du monde en 80 jours</h2>
+                        <p class="carte-auteur">Jules Verne</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1872</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Les+Mis%C3%A9rables" alt="Les Misérables">
+                        <span class="badge badge-disponible">1 / 2 disponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Roman</span>
+                        <h2 class="carte-titre">Les Misérables</h2>
+                        <p class="carte-auteur">Victor Hugo</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1862</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Madame+Bovary" alt="Madame Bovary">
+                        <span class="badge badge-disponible">1 / 1 disponible</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Roman</span>
+                        <h2 class="carte-titre">Madame Bovary</h2>
+                        <p class="carte-auteur">Gustave Flaubert</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1857</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carte">
+                    <a href="#" class="carte-couverture">
+                        <img src="https://placehold.co/400x600?text=Vingt+mille+lieues+sous+les+mers" alt="Vingt mille lieues sous les mers">
+                        <span class="badge badge-disponible">2 / 3 disponibles</span>
+                    </a>
+                    <div class="carte-contenu">
+                        <span class="genre">Aventure</span>
+                        <h2 class="carte-titre">Vingt mille lieues sous les mers</h2>
+                        <p class="carte-auteur">Jules Verne</p>
+                        <div class="carte-bas">
+                            <span class="carte-annee">1870</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+
+        </section>
+
+    </main>
+
+    <footer class="pied">
+        <div class="conteneur pied-contenu">
+            <span>BiblioTech — médiathèque de quartier</span>
+            <span>Prêt de 3 semaines, renouvelable une fois</span>
+        </div>
+    </footer>
+
+</body>
+</html>

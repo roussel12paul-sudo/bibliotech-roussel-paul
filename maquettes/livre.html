@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Germinal — BiblioTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="entete">
+        <div class="conteneur entete-contenu">
+            <a href="#" class="logo">Biblio<span>Tech</span></a>
+            <nav class="menu">
+                <a href="#" class="actif">Catalogue</a>
+                <a href="#">Les plus empruntés</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteneur">
+
+        <nav class="fil-ariane">
+            <a href="#">Catalogue</a>
+            <span>›</span>
+            <a href="#">Roman</a>
+            <span>›</span>
+            <span class="fil-actuel">Germinal</span>
+        </nav>
+
+        <section class="fiche">
+
+            <div class="fiche-couverture">
+                <img src="https://placehold.co/400x600?text=Germinal" alt="Germinal">
+            </div>
+
+            <div class="fiche-details">
+                <span class="genre">Roman</span>
+                <h1 class="fiche-titre">Germinal</h1>
+                <p class="fiche-auteur">de <strong>Émile Zola</strong></p>
+
+                <p class="fiche-resume">
+                    Dans les mines du nord de la France, un jeune ouvrier découvre la vie des mineurs
+                    et prend la tête d'une grève qui va bouleverser tout le coron.
+                </p>
+
+                <div class="fiche-infos">
+                    <div class="info">
+                        <span class="info-label">Parution</span>
+                        <span class="info-valeur">1885</span>
+                    </div>
+                    <div class="info">
+                        <span class="info-label">Exemplaires</span>
+                        <span class="info-valeur">3</span>
+                    </div>
+                    <div class="info">
+                        <span class="info-label">Emprunts</span>
+                        <span class="info-valeur">5</span>
+                    </div>
+                </div>
+
+                <p class="dispo dispo-ok">1 exemplaire disponible sur 3</p>
+
+                <div class="fiche-action">
+                    <button type="button" class="bouton bouton-grand">Réserver ce livre</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section">
+            <h2 class="section-titre">Derniers emprunts</h2>
+
+            <table class="tableau">
+                <thead>
+                    <tr>
+                        <th>Adhérent</th>
+                        <th>Emprunté le</th>
+                        <th>Ville</th>
+                        <th>Statut</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Camille Laurent</td>
+                        <td>02/11/2026</td>
+                        <td>Lyon</td>
+                        <td><span class="statut statut-en-cours">En cours</span></td>
+                    </tr>
+                    <tr>
+                        <td>Hugo Martin</td>
+                        <td>14/10/2026</td>
+                        <td>Paris</td>
+                        <td><span class="statut statut-en-cours">En cours</span></td>
+                    </tr>
+                    <tr>
+                        <td>Inès Moreau</td>
+                        <td>21/09/2026</td>
+                        <td>Nantes</td>
+                        <td><span class="statut statut-rendu">Rendu le 08/10/2026</span></td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Bernard</td>
+                        <td>03/09/2026</td>
+                        <td>Lille</td>
+                        <td><span class="statut statut-rendu">Rendu le 19/09/2026</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Lefèvre</td>
+                        <td>11/08/2026</td>
+                        <td>Bordeaux</td>
+                        <td><span class="statut statut-rendu">Rendu le 30/08/2026</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2 class="section-titre">Du même genre</h2>
+
+            <div class="grille">
+
+                    <article class="carte">
+                        <a href="#" class="carte-couverture">
+                            <img src="https://placehold.co/400x600?text=L%27%C3%89tranger" alt="L'Étranger">
+                            <span class="badge badge-indisponible">Indisponible</span>
+                        </a>
+                        <div class="carte-contenu">
+                            <span class="genre">Roman</span>
+                            <h2 class="carte-titre">L'Étranger</h2>
+                            <p class="carte-auteur">Albert Camus</p>
+                            <div class="carte-bas">
+                                <span class="carte-annee">1942</span>
+                                <a href="#" class="bouton bouton-petit">Voir</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carte">
+                        <a href="#" class="carte-couverture">
+                            <img src="https://placehold.co/400x600?text=Les+Mis%C3%A9rables" alt="Les Misérables">
+                            <span class="badge badge-disponible">1 / 2 disponible</span>
+                        </a>
+                        <div class="carte-contenu">
+                            <span class="genre">Roman</span>
+                            <h2 class="carte-titre">Les Misérables</h2>
+                            <p class="carte-auteur">Victor Hugo</p>
+                            <div class="carte-bas">
+                                <span class="carte-annee">1862</span>
+                                <a href="#" class="bouton bouton-petit">Voir</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carte">
+                        <a href="#" class="carte-couverture">
+                            <img src="https://placehold.co/400x600?text=Madame+Bovary" alt="Madame Bovary">
+                            <span class="badge badge-disponible">1 / 1 disponible</span>
+                        </a>
+                        <div class="carte-contenu">
+                            <span class="genre">Roman</span>
+                            <h2 class="carte-titre">Madame Bovary</h2>
+                            <p class="carte-auteur">Gustave Flaubert</p>
+                            <div class="carte-bas">
+                                <span class="carte-annee">1857</span>
+                                <a href="#" class="bouton bouton-petit">Voir</a>
+                            </div>
+                        </div>
+                    </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pied">
+        <div class="conteneur pied-contenu">
+            <span>BiblioTech — médiathèque de quartier</span>
+            <span>Prêt de 3 semaines, renouvelable une fois</span>
+        </div>
+    </footer>
+
+</body>
+</html>
